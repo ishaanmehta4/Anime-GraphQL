@@ -1,0 +1,29 @@
+{
+  "name": "anime-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL API providing data about animes and anime characters.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "anime",
+    "graphql"
+  ],
+  "author": "Ishaan Mehta",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "jsdom": "^16.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
