@@ -1,0 +1,19 @@
+#query-result-box {
+    display: block;
+    position: relative;
+
+    // height: 100%;
+    width: 100%;
+    // overflow: visible;
+    // display: grid;
+
+    #query-result-box__play-button {
+        position: absolute;
+        width: max-content;
+        top: calc(50vh - 240px);
+        // border: solid;
+        left: -28px;
+    }
+
+
+}

@@ -1,0 +1,20 @@
+#query-string-box {
+    position: relative;
+
+    & > textarea {
+        display: block;
+        width: calc(100% - 24px);
+        border: solid 1px rgba(0,0,0, 0.0);
+        font-size: 1.2em;
+        line-height: 1.6em;
+
+        margin: 0 12px;
+        padding: 12px 8px;
+        
+        &:focus {
+            outline-color: rgba(0, 170, 91, 0.2);
+            outline-width: 0.2px;
+        }
+
+    }
+}
