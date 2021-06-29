@@ -21,8 +21,8 @@ type characterData {
     wealth: String
     anime: animeData
     mediatype: String
-    voicedby: String
-    tags: String
+    voicedby: [String]
+    tags: [String]
     birthday: String
     sign: String
     height: String

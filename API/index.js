@@ -1,11 +1,13 @@
 // ---------- Dependencies and imports ----------
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const morgan = require('morgan');
 
 const graphqlHTTP = require('./graphql');
 
 // ---------- Middlewares ----------
+app.use(cors());
 app.use(morgan('dev'));
 
 // ---------- Routes ----------
