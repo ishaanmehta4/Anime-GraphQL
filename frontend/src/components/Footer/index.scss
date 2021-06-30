@@ -1,0 +1,29 @@
+#footer {
+  display: grid;
+  margin: 20px 40px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+
+  & > div:nth-child(1) {
+    h3 {
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+
+    // div::before {
+    //   content: '';
+    //   display: inline-block;
+    //   background-color: #00ee00;
+    //   height: 4px;
+    //   width: 4px;
+    // }
+
+    a {
+      margin-left: 8px;
+    }
+  }
+
+  & > div:nth-child(2) {
+    text-align: right;
+  }
+}

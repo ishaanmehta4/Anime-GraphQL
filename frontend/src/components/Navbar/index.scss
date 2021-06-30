@@ -1,11 +1,27 @@
 #navbar {
-    height: 100px;
-    width: 100vw;
-    // display: grid;
+  // display: grid;
+  align-items: baseline;
 
-    & > div {
-        width: 100%;
-        height: 100%;
-        border: solid 1px;
+  height: 100px;
+  width: 100vw;
+
+  padding: 20px 40px;
+
+  h1 {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.6);
+    span {
+      color: #00aa5b;
     }
+  }
+
+  a {
+    float: right;
+  }
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    border: solid 1px;
+  }
 }

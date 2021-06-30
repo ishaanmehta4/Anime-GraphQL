@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ripple from 'ripple-effects'
 import './index.scss';
 
 import FieldList from "../FieldList";
@@ -44,6 +45,20 @@ function MainGrid() {
     queryString: DEFAULT_QUERY.character,
   });
 
+  useEffect(() => {
+    document.querySelector('textarea').focus()
+  }, [rootState.queryType])
+
+  useEffect(() => {
+    // ripple(button.current)
+    // or
+    ripple('.section1__option', {
+      background: 'rgb(0, 170, 91)',
+      opacity: '0.2',
+      outDuration: 500,
+    })
+  }, [])
+
   return (
     <div id="main-grid">
       {/* COLUMN 1 */}
@@ -54,7 +69,7 @@ function MainGrid() {
             setRootState({ ...rootState, queryType: 'character' , queryString: DEFAULT_QUERY.character});
           }}
           className={`section1__option ${rootState.queryType == 'character' && 'section1__option--active'}`}
-        >
+          >
           Character
         </div>
         <div

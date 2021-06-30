@@ -34,7 +34,7 @@ var characters = async parent => {
 
   let characterResponses = await Promise.all(characterPromises);
   characterResponses = characterResponses.map(resp => resp[0]); // getting all results
-  parent.characterNames.slice(MAX_CHARACTER_LIMIT).forEach(name => {
+  parent.characterNames.slice(MAX_CHARACTERS_LIMIT).forEach(name => {
     characterResponses.push({ name });
   });
   return characterResponses;

@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import MainGrid from './components/MainGrid';
 import Navbar from './components/Navbar';
+import MainGrid from './components/MainGrid';
+import Footer from './components/Footer';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
@@ -28,6 +29,7 @@ function App() {
       <div className="App">
         <Navbar />
         <MainGrid />
+        <Footer />
       </div>
     </ThemeProvider>
   );
