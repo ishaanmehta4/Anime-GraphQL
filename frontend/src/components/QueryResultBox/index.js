@@ -7,7 +7,7 @@ import JSONPretty from 'react-json-pretty';
 import './react-json-pretty-custom.css';
 
 import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from '@apollo/client';
-const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = 'https://anime-gql.herokuapp.com' || 'http://localhost:5000';
 
 const client = new ApolloClient({
   uri: `${API_BASE_URL}/graphql`,

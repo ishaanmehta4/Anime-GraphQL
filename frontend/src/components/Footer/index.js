@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = 'https://anime-gql.herokuapp.com' || 'http://localhost:5000';
 
 function Footer() {
   return (
