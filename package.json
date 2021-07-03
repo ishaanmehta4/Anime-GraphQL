@@ -1,0 +1,19 @@
+{
+  "name": "anime-graphql",
+  "version": "1.0.0",
+  "description": "Anime data api using GraphQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishaanmehta4/Anime-GraphQL.git"
+  },
+  "author": "Ishaan Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishaanmehta4/Anime-GraphQL/issues"
+  },
+  "homepage": "https://github.com/ishaanmehta4/Anime-GraphQL#readme"
+}
