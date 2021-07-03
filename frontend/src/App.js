@@ -28,6 +28,7 @@ function App() {
     <ThemeProvider theme={appTheme}>
       <div className="App">
         <Navbar />
+        <h3 class="mobile_error">Come back on a PC later to try out the queries.</h3>
         <MainGrid />
         <Footer />
       </div>

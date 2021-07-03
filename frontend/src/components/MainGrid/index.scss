@@ -55,3 +55,9 @@
     color: rgb(0, 170, 91);
   }
 }
+
+@media(max-width: 1000px) {
+  #main-grid {
+    display: none;
+  }
+}

@@ -18,14 +18,15 @@ function QueryResultBox({ queryString }) {
   let [state, setState] = useState({
     loading: false,
     data: '',
+    error: 'noerr',
   });
 
   useEffect(() => {
-    execQuery()
+    execQuery();
   }, []);
 
   async function execQuery() {
-   setState({
+    setState({
       data: {},
       loading: true,
     });
@@ -42,9 +43,15 @@ function QueryResultBox({ queryString }) {
             data: result.data,
             loading: false,
           });
+        })
+        .catch(err => {
+          setState({
+            data: { errors: err },
+            loading: false,
+          });
         });
     } catch (err) {
-      console.log(err);
+      console.log('error', err.result);
     }
   }
   return (
@@ -59,9 +66,9 @@ function QueryResultBox({ queryString }) {
           <CircularProgress color="secondary" />
         </div>
       )}
-      {(state.data.anime || state.data.character) && (
+      {(Object.keys(state.data).length != 0) && (
         <div class="query-result-box__result-wrapper">
-          <JSONPretty id="json-pretty" data={state.data || {}}></JSONPretty>
+          <JSONPretty id="json-pretty" data={state.data}></JSONPretty>
         </div>
       )}
     </div>
