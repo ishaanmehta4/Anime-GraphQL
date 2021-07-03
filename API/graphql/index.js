@@ -12,5 +12,8 @@ const schema = makeExecutableSchema({
 
 module.exports = (req, res, next) => graphqlHTTP({
     schema,
-    graphiql: true
+    graphiql: true,
+    formatError: (error) => {
+      return (error)
+    }
 })(req, res, next)

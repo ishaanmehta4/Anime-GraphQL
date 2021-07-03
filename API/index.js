@@ -5,6 +5,7 @@ const cors = require('cors')
 const morgan = require('morgan');
 
 const graphqlHTTP = require('./graphql');
+const restRouter = require('./rest')
 
 // ---------- Middlewares ----------
 app.use(cors());
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/graphql', graphqlHTTP);
-// app.use('/rest', restRouter)
+app.use('/rest', restRouter)
 
 // ---------- Middlewares ----------
 app.listen(process.env.PORT || 5000, () => {
