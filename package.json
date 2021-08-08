@@ -4,7 +4,8 @@
   "description": "Anime data api using GraphQL and web-scraping.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall":"tsc && cp -R API/build-react API/build-ts/"
   },
   "repository": {
     "type": "git",

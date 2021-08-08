@@ -2,8 +2,8 @@
     "compilerOptions": {
       "target": "es6",
       "module": "commonjs",
-      "rootDir": "./",
-      "outDir": "./build-ts",
+      "rootDir": "./API/",
+      "outDir": "./API/build-ts",
       "esModuleInterop": true,
       "strict": true,
     }
