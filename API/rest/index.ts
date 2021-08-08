@@ -1,8 +1,9 @@
-const express = require('express');
-const { getCharacterData, getAnimeData } = require('../lib/scrapers');
-module.exports = restRouter = express.Router();
+import express, { Request, Response, Router } from 'express';
 
-restRouter.get('/character/:character_name', async (req, res) => {
+const { getCharacterData, getAnimeData } = require('../lib/scrapers');
+var restRouter: Router = express.Router();
+
+restRouter.get('/character/:character_name', async (req: Request, res: Response) => {
   try {
     let characterName = decodeURI(req.params.character_name).replace(' ', '+');
     let [data, error] = await getCharacterData(characterName);
@@ -14,7 +15,7 @@ restRouter.get('/character/:character_name', async (req, res) => {
   }
 });
 
-restRouter.get('/anime/:anime_name', async (req, res) => {
+restRouter.get('/anime/:anime_name', async (req: Request, res: Response) => {
   try {
     let animeName = decodeURI(req.params.anime_name).replace(' ', '+');
     let [data, error] = await getAnimeData(animeName);
@@ -25,3 +26,5 @@ restRouter.get('/anime/:anime_name', async (req, res) => {
     res.status(500).json({ status: 'error', error });
   }
 });
+
+module.exports = restRouter;

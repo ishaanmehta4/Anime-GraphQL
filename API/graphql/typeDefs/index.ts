@@ -1,6 +1,6 @@
 // typedefs in SDL for anime and character entities
 
-var animeData = `
+var animeData:string = `
 type animeData {
     name: String
     plot: String
@@ -10,7 +10,7 @@ type animeData {
     characterNames: [String]
 }`
 
-var characterData = `
+var characterData:string = `
 type characterData {
     name: String
     bio: String
@@ -29,4 +29,4 @@ type characterData {
     uploadedby: String
 }`
 
-module.exports = `${animeData} ${characterData}`
+export default `${animeData} ${characterData}`
