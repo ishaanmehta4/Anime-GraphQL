@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "rootDir": "./API/",
+      "outDir": "./API/build-ts",
+      "esModuleInterop": true,
+      "strict": true,
+    }
+  }
