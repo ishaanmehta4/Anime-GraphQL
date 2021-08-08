@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "postinstall":"npm run tsc && cp -R API/build-react API/build-ts/"
+    "postinstall": "npm run tsc && cp -R API/build-react API/build-ts/"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
     "graphql-tools": "^7.0.5",
     "jsdom": "^16.6.0",
     "morgan": "^1.10.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "typescript": "^4.3.5"
   },
   "homepage": "https://github.com/ishaanmehta4/Anime-GraphQL#readme"
 }
